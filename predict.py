@@ -6,7 +6,7 @@ from unified_detector import Fingertips
 hand = YOLO(weights='weights/yolo.h5', threshold=0.8)
 fingertips = Fingertips(weights='weights/classes8.h5')
 
-image = cv2.imread('data/sample.jpg')
+image = cv2.imread('data/sample_2.jpg')
 tl, br = hand.detect(image=image)
 if tl or br is not None:
     cropped_image = image[tl[1]:br[1], tl[0]: br[0]]
